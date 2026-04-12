@@ -1,10 +1,11 @@
 import React from 'react';
+import MainSection from '../components/MainSection';
 
 const FromBuilderPage = () => {
     return (
-        <div>
+        <MainSection title='Form Builder'>
             Form Builder Page
-        </div>
+        </MainSection>
     );
 };
 

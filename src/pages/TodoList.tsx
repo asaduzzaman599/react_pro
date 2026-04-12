@@ -1,8 +1,10 @@
+import MainSection from "../components/MainSection";
+
 const TodoListPage = () => {
     return (
-        <div>
+        <MainSection title='TODO List' >
             TODO List Page
-        </div>
+        </MainSection>
     );
 };
 
