@@ -5,6 +5,7 @@ interface TodoState {
   userId?: number
   completed?: boolean
   page: number
+  limit: number
 }
 
 const initialState: TodoState = {
@@ -12,6 +13,7 @@ const initialState: TodoState = {
   completed: undefined,
   search: undefined,
   page: 1,
+  limit: 10,
 }
 
 const todoSlice = createSlice({

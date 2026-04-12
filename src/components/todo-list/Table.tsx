@@ -1,6 +1,7 @@
 import { usePaginatedTodos, useUsers } from "../../hooks/todos"
 import type { Todo, User } from "../../types/todo"
 import Card from "../Card"
+import Pagination from "./table/Pagination"
 
 
 export default function Table() {
@@ -50,6 +51,7 @@ export default function Table() {
                 ))}
               </tbody>
             </table>
+            <Pagination />
             </div>
             </div>
             </Card>
