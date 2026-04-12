@@ -27,7 +27,6 @@ const todoSlice = createSlice({
       state.page = 1
     },
     setSearch: (state, action: PayloadAction<string | undefined>) => {
-        console.log('Setting search to', action.payload)
       state.search = action.payload
       state.page = 1
     },

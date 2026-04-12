@@ -6,12 +6,11 @@ import { StatusSelect } from './StatusSelect'
 import { resetFilters } from '../../store/todo/todoSlice'
 import { useDispatch } from 'react-redux'
 import PrimaryButton from './PrimaryButton'
+import { useUsers } from '../../hooks/todos'
 
-interface Props {
-  users: User[]
-}
 
-const Filters = ({ users }: Props) => {
+const Filters = () => {
+    const { data: users } = useUsers()
     const dispatch = useDispatch()
   return (
     <Card>
