@@ -1,4 +1,3 @@
-import React from 'react';
 import MainSection from '../components/MainSection';
 import FormBuilder from '../components/form-builder/FormBuilderForm';
 

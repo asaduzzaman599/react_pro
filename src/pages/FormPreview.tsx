@@ -9,7 +9,7 @@ const FormPreviewPage = () => {
     (state: RootState) => state.form.fields
   );
     return (
-        <MainSection title='Dynamic Form Builder' subTitle="Create custom forms by adding and configuring fields" >
+        <MainSection title='Form Preview' subTitle="Preview and test your custom form" >
             <FormPreview fields={fields} />
         </MainSection>
     );

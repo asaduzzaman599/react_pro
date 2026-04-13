@@ -3,7 +3,7 @@ export type FieldType = 'text' | 'textarea' | 'select' | 'checkbox';
 export interface FormField {
   label: string;
   type: FieldType;
-  options?: string[];
+  options?: Array<{ value: string }>;
   required?: boolean;
 }
 
