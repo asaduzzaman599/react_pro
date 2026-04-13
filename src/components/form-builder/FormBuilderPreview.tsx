@@ -13,10 +13,11 @@ type FormField = {
 
 type Props = {
   fields: FormField[];
+  isLivePreview?: boolean;
 };
 
-export const FormPreview = ({ fields }: Props) => {
-  const { register, handleSubmit } = useForm();
+export const FormPreview = ({ fields, isLivePreview }: Props) => {
+  const { register, handleSubmit, reset } = useForm();
 
   const onSubmit = (data: any) => {
     console.log("FORM SUBMIT:", data);
@@ -87,12 +88,23 @@ export const FormPreview = ({ fields }: Props) => {
           </div>
         ))}
 
+{isLivePreview ? null :<div className="flex gap-2">
+
         <button
           type="submit"
           className="bg-green-600 text-white px-3 py-2 rounded"
-        >
+          >
           Submit
         </button>
+        
+        <button
+        type="button"
+          className="bg-red-600 text-white px-3 py-2 rounded"
+          onClick={() => reset()}
+          >
+          Reset
+        </button>
+            </div>}
 
       </form>)
   return (

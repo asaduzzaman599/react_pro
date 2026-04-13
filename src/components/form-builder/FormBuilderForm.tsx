@@ -113,7 +113,9 @@ export default function FormBuilder() {
         <div className="flex justify-between items-center mb-4 h-10">
           <h2 className="text-xl">Live Preview</h2>
         </div>
-        <FormPreview fields={formValues} />
+      <div className="md:sticky md:top-0 md:h-screen overflow-auto mb-4">
+  <FormPreview fields={formValues} isLivePreview={true} />
+</div>
       </div>
     </div>
   );

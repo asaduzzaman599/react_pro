@@ -7,7 +7,7 @@ function App() {
 
   return (
     <>
-    <div className='bg-gray-100 min-h-fit'>
+    <div className=''>
       <AppProviders>
           <Nav />
           <AppRouter />
