@@ -10,7 +10,7 @@ const UserSelect = ({...props}) => {
     const state = useStoreState()
     const dispatch = useDispatch()
 
-    return (<div {...props}> {state.todo.userId}
+    return (<div {...props}>
                 <InputSelect 
                 label='Filter by User' 
                 options={users?.map((user: User) => ({ title: user.name, value: user.id })) ?? []} 

@@ -7,7 +7,7 @@ interface Props {
   value?: number
 }
 
-export default function InputSelect({label, options, onChange, value}: Props) {
+export default function InputSelect({label, options, onChange, value, ...props}: Props) {
   return (
     <>
       <label htmlFor="location" className="block text-sm/6 font-medium text-gray-900">
