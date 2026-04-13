@@ -68,7 +68,7 @@ export default function Nav() {
           <div className="flex h-16 items-center justify-start gap-6">
 
             <div className="text-xl font-semibold text-gray-700">
-              Reat Assessment
+              React Pro
             </div>
 
             <div className="hidden lg:flex items-center gap-6">
