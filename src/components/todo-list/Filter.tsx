@@ -1,4 +1,4 @@
-import type { User } from '../../types/todo'
+
 import Card from '../Card'
 import UserSelect from './UserSelect'
 import SearchInput from './SearchInput'

@@ -2,6 +2,7 @@ import { useDispatch } from "react-redux"
 import { useStoreState } from "../../../store/store-state"
 import { setPage } from "../../../store/todo/todoSlice"
 import { useTodos } from "../../../hooks/todos"
+import { ChevronRightIcon, ChevronLeftIcon } from '@heroicons/react/20/solid'
 
 export default function Pagination() {
     const state = useStoreState()
@@ -19,7 +20,7 @@ export default function Pagination() {
       <div className="hidden sm:block">
         <p className="text-sm text-gray-700">
           Showing <span className="font-medium">{(state.todo.page - 1) * state.todo.limit + 1}</span> to <span className="font-medium">{state.todo.page * state.todo.limit}</span> of{' '}
-          <span className="font-medium">{data.length ?? 0}</span> results
+          <span className="font-medium">{data?.length ?? 0}</span> results
         </p>
       </div>
       <div className="flex flex-1 justify-between sm:justify-end">
@@ -28,15 +29,15 @@ export default function Pagination() {
             onClick={()=>onClick(-1)}
             className="relative inline-flex items-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-700 ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
           >
-            Previous
+            <ChevronLeftIcon aria-hidden="true" className="size-5 shrink-0 text-gray-400" />
           </button>
         )}
-        {state.todo.page * state.todo.limit < data.length && (
+        {state.todo.page * state.todo.limit < data?.length && (
           <button
             onClick={()=>onClick(1)}
             className="relative ml-3 inline-flex items-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-700 ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
           >
-            Next
+            <ChevronRightIcon aria-hidden="true" className="size-5 shrink-0 text-gray-400" />
           </button>
         )}
       </div>

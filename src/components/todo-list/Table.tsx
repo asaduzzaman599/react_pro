@@ -1,5 +1,5 @@
 import { usePaginatedTodos, useUsers } from "../../hooks/todos"
-import type { Todo, User } from "../../types/todo"
+import type { Todo } from "../../types/todo"
 import Card from "../Card"
 import Pagination from "./table/Pagination"
 
@@ -44,7 +44,7 @@ export default function Table() {
                     </td>
                     <td className="whitespace-nowrap px-3 py-5 text-sm text-gray-500">
 
-                      <div className="mt-1 text-gray-500">{users?.find((u) => u.id === todo.userId)?.name}</div>
+                      <div className="mt-1 text-gray-500">{users?.find((user: { id: number; name: string }) => user.id === todo.userId)?.name}</div>
                     </td>
                     
                   </tr>
