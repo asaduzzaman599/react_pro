@@ -7,12 +7,14 @@ import Pagination from "./table/Pagination"
 export default function Table() {
     const { data: todos } = usePaginatedTodos()
     const { data: users } = useUsers()
-  return (
-    <div className="my-8">
-    <Card>
-      <div className="flow-root overflow-hidden">
+
+    const tableContent = !todos || todos.length === 0 ? (
+        <div className="flex flex-col items-center justify-center py-20">
+          <p className="text-sm text-gray-500">No todos found.</p>
+        </div>
+      ) : (<><div className="flow-root overflow-x-auto">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <table className="relative min-w-full divide-y rounded divide-gray-300 ">
+    <table className="relative min-w-full divide-y rounded divide-gray-300">
               <thead>
                 <tr>
                   <th scope="col" className="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-0">
@@ -51,9 +53,13 @@ export default function Table() {
                 ))}
               </tbody>
             </table>
-            <Pagination />
             </div>
             </div>
+            <Pagination /></>)
+  return (
+    <div className="my-8">
+    <Card>
+        {tableContent}
             </Card>
             
     </div>

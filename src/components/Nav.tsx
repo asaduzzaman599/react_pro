@@ -65,7 +65,7 @@ export default function Nav() {
 
       <header className="border-b border-gray-200">
         <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex h-16 items-center justify-start gap-6">
+          <div className="flex h-16 items-center lg:justify-start justify-between gap-6">
 
             <div className="text-xl font-semibold text-gray-700">
               React Pro

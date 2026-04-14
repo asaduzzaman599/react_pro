@@ -15,7 +15,7 @@ export default function Pagination() {
   return (
     <nav
       aria-label="Pagination"
-      className="flex items-center justify-between border-t border-gray-200 bg-white px-4 py-3 sm:px-6"
+      className="flex items-center justify-end lg:justify-between border-t border-gray-200 bg-white px-4 py-3 sm:px-6"
     >
       <div className="hidden sm:block">
         <p className="text-sm text-gray-700">
@@ -23,7 +23,7 @@ export default function Pagination() {
           <span className="font-medium">{data?.length ?? 0}</span> results
         </p>
       </div>
-      <div className="flex flex-1 justify-between sm:justify-end">
+      <div className="flex flex-1 justify-end ml-auto">
         {state.todo.page > 1 && (
           <button
             onClick={()=>onClick(-1)}
